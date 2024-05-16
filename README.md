@@ -1,1 +1,3 @@
-# tutorial11
+1. The logs change noticeably when the application is exposed as a Service. Initially, they show the app's setup and serving on port 8080. After exposure, accessing the app through the proxy triggers additional log activity, indicating incoming HTTP requests. This illustrates the Service effectively directing traffic to the app pod, evident in the growing number of log entries per access.
+
+2. The `-n` option in `kubectl get` helps filter resources by namespace. Without it, the command retrieves items from the default namespace, where user-deployed resources reside. Conversely, specifying `-n kube-system` narrows down the search to the `kube-system` namespace, which mainly hosts system-level components. Consequently, user-created pods and services won't appear in the output of the latter command.
